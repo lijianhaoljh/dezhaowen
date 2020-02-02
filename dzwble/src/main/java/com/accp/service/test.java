@@ -17,6 +17,7 @@ public class test {
 	@Autowired
 	CarbrandMapper carbrandMapper;
 	/*
+	 * 
 	 * 模糊查询
 	 */
 	public List<Carbrand> findLikeCarbrand(String condition){
@@ -27,11 +28,11 @@ public class test {
 			//不为空
 			if(condition.matches("^[0-9]*$")) {
 				//数字根据编号查
-				example.createCriteria().andCbnoEqualTo(Integer.valueOf(condition));
+				example.or().andCbnoEqualTo(Integer.valueOf(condition.trim()));
 			}else {
 				//非数字根据编号查或是名称或首字母
-				example.or().andCbfirstLike("%"+condition+"%");
-				example.or().andCbnameLike("%"+condition+"%");
+				example.or().andCbnameLike("%"+condition.trim()+"%");
+				example.or().andCbfirstLike("%"+condition.trim()+"%");
 			}
 		}
 		return carbrandMapper.selectByExample(example);
