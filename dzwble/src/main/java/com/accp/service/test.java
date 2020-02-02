@@ -37,4 +37,5 @@ public class test {
 		}
 		return carbrandMapper.selectByExample(example);
 	}
+	
 }
