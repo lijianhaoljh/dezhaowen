@@ -6,6 +6,9 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface MaintenanceMapper {
+	
+	List<Maintenance> fdjQuery();
+	
     int countByExample(MaintenanceExample example);
 
     int deleteByExample(MaintenanceExample example);

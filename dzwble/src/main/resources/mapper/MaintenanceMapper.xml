@@ -12,6 +12,13 @@
     <result column="remark4" property="remark4" jdbcType="VARCHAR" />
     <result column="remark5" property="remark5" jdbcType="VARCHAR" />
   </resultMap>
+  
+  
+  <select id="fdjQuery" resultMap="BaseResultMap">
+  			SELECT * FROM  maintenance WHERE parentid = 2
+  </select>
+  
+  
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >

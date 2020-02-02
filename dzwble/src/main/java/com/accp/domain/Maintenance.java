@@ -1,5 +1,7 @@
 package com.accp.domain;
 
+import java.util.List;
+
 public class Maintenance {
     private Integer mid;
 
@@ -18,8 +20,10 @@ public class Maintenance {
     private String remark4;
 
     private String remark5;
+    
+    
 
-    public Integer getMid() {
+	public Integer getMid() {
         return mid;
     }
 

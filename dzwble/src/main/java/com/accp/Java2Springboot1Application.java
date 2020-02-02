@@ -12,5 +12,4 @@ public class Java2Springboot1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Java2Springboot1Application.class, args);
 	}
-
 }
